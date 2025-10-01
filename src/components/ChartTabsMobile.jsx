@@ -14,7 +14,7 @@ function ChartTabsMobile({ value, onChange }) {
             onClick={() => onChange(t.key)}
             className={`${
               value === t.key
-                ? "bg-blue-600 text-white"
+                ? "bg-blue-700 text-white"
                 : "bg-white text-gray-900 hover:bg-blue-50"
             } h-12 px-5 rounded-xl text-base font-medium whitespace-nowrap`}
             style={{ fontFamily: "Helvetica Neue, sans-serif" }}

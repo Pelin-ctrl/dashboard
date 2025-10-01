@@ -11,15 +11,15 @@ function TimeTabs({
           onClick={() => onChange("now")}
           className={`${
             value === "now"
-              ? "bg-blue-600 text-white"
+              ? "bg-blue-700 text-white"
               : "bg-white text-gray-900 hover:bg-blue-50"
           } h-12 px-5 rounded-xl text-base font-medium leading-none transition-colors mr-1 min-w-[9rem]`}
           style={{ fontFamily: "Helvetica Neue, sans-serif" }}
         >
           <span className="inline-flex items-center gap-2">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-60"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
             </span>
             Текущее состояние
           </span>
@@ -34,7 +34,7 @@ function TimeTabs({
             onClick={() => onChange(opt)}
             className={`${
               isActive
-                ? "bg-blue-600 text-white"
+                ? "bg-blue-700 text-white"
                 : "bg-white text-gray-900 hover:bg-blue-50"
             } h-12 px-4 sm:px-5 rounded-xl text-sm sm:text-base font-medium leading-none transition-colors whitespace-nowrap min-w-[5.5rem]`}
             style={{ fontFamily: "Helvetica Neue, sans-serif" }}
