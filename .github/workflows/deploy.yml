@@ -30,9 +30,18 @@ jobs:
       - name: Install deps
         run: npm ci --prefer-offline --no-audit
 
+      - name: Detect base path
+        id: base
+        run: |
+          if [ -f public/CNAME ]; then
+            echo "base=/" >> $GITHUB_OUTPUT
+          else
+            echo "base=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build with base path
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          BASE_PATH: ${{ steps.base.outputs.base }}
         run: npm run build
 
       - name: Upload artifact
